@@ -1,9 +1,9 @@
 const CACHE_NAME = 'pwa-presentation-v1';
 const ASSETS = [
-  '/test/index.html',
-  '/test/manifest.webmanifest',
-  '/test/icons/icon-192.svg',
-  '/test/icons/icon-512.svg'
+  './index.html',
+  './manifest.webmanifest',
+  './icons/icon-192.svg',
+  './icons/icon-512.svg'
 ];
 
 self.addEventListener('install', event => {
@@ -25,6 +25,7 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(response => response || fetch(event.request))
   );
 });
+
 
 
 
